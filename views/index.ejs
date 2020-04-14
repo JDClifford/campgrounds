@@ -10,11 +10,12 @@
   </div>
 
   <div class="row d-flex align-items-start">
-    <% list.forEach(campground => { %>
+    <% campgrounds.forEach(campground => { %>
         <div class="col-md-3 card text-center mb-4">
          <img class="card-img-top" src="<%= campground.image %>">
-d          <div class="card-body">
+          <div class="card-body">
             <h5 class="card-title"><%- campground.name %></h5>
+            <p><a href="/campgrounds/<%= campground.id %>" class="btn btn-info btn-sm">More Info</a></p>
           </div>          
         </div>
     <% }) %>
